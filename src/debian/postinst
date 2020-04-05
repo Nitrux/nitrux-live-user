@@ -1,0 +1,8 @@
+#! /bin/sh
+
+
+echo "==> Adding user 'nitrux'."
+
+useradd -G wheel -m nitrux
+
+printf "%s\n" nitrux nitrux | passwd nitrux
