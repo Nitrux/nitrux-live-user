@@ -16,6 +16,6 @@ printf "%s\n" \
 	"Depends: $DEPENDS" \
 	"Architecture: all" \
 	"Description: Default user for the Nitrux system." \
-> configuration
+> config
 
-equivs-build configuration
+equivs-build config
