@@ -14,6 +14,8 @@ printf "%s\n" \
 	"Version: 0.0.1-$git_version" \
 	"Maintainer: Luis Lavaire <llavaire01@gmail.com>" \
 	"Depends: $deps" \
+	"Replaces: adduser" \
+	"Provides: adduser" \
 	"Architecture: all" \
 	"Description: Default user for the Nitrux system." \
 > config
