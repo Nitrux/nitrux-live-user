@@ -6,16 +6,15 @@ deps=$(sed -e '/^#.*$/d; /^$/d; /^\s*$/d; s/$/,/' deps)
 
 git_version=$(git rev-parse --short HEAD)
 
-printf "%s\n" \
+> config printf "%s\n" \
 	"Section: misc" \
 	"Priority: optional" \
 	"Homepage: https://nxos.org" \
-	"Package: adduser-nitrux" \
+	"Package: nitrux-live-user" \
 	"Version: 0.0.1-$git_version" \
 	"Maintainer: Luis Lavaire <llavaire01@gmail.com>" \
 	"Depends: $deps" \
 	"Architecture: all" \
-	"Description: Default user for the Nitrux system." \
-> config
+	"Description: Default user for the Nitrux system."
 
 equivs-build config
