@@ -1,4 +1,8 @@
+sudo: required
+
 script:
+  - sudo apt -q -yy update
+  - sudo apt -q -yy install wget equivs curl
   - bash build.sh
 
 after_success:
