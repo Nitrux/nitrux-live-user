@@ -9,6 +9,7 @@ git_version=$(git rev-parse --short HEAD)
 	"Maintainer: Luis Lavaire <llavaire01@gmail.com>" \
 	"Depends: nitrux-minimal,adduser" \
 	"Architecture: all" \
+	"Postinst: postinst" \
 	"Description: Default user for the Nitrux system."
 
 equivs-build config
