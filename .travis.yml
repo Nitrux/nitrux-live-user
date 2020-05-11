@@ -7,7 +7,7 @@ script:
 
 after_success:
   - wget -qO nru https://raw.githubusercontent.com/Nitrux/nitrux-repository-util/master/nitrux-repository-util.sh
-  - bash nru out/*
+  - bash nru *.deb
 
 branches:
   except:
