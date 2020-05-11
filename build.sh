@@ -1,8 +1,8 @@
-apt-get --yes update
-apt-get --yes install wget equivs curl git
+apt -q -yy update
+apt -q -yy install wget equivs curl git
 
 
-deps=$(sed -e '/^#.*$/d; /^$/d; /^\s*$/d; s/$/,/' deps)
+deps=$(sed -e '/^#.*$/d; /^\s*$/d; $! s/$/,/' deps)
 
 git_version=$(git rev-parse --short HEAD)
 

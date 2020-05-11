@@ -1,12 +1,9 @@
-sudo: required
-
 script:
-  - sudo docker run --rm -v $(pwd)/:/build/ -w /build/ ubuntu:bionic /bin/bash build.sh $TRAVIS_COMMIT $TRAVIS_BRANCH
+  - bash build.sh
 
 after_success:
-  - wget -q https://github.com/probonopd/uploadtool/raw/master/upload.sh
-  - export UPLOADTOOL_SUFFIX=$TRAVIS_BRANCH
-  - bash upload.sh out/*
+  - wget -qO nru https://raw.githubusercontent.com/Nitrux/nitrux-repository-util/master/nitrux-repository-util.sh
+  - bash nru out/*
 
 branches:
   except:
