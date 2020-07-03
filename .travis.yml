@@ -1,17 +1,19 @@
-sudo: required
+dist: bionic
 
 script:
-  - sudo apt -qq -yy update
-  - sudo apt -qq -yy install wget equivs curl
-  - bash build.sh
-
-after_success:
-  - wget -qO nru https://raw.githubusercontent.com/Nitrux/nitrux-repository-util/master/nitrux-repository-util.sh
-  - bash nru *.deb
+  - sudo ./build.sh
 
 branches:
-  except:
-    - "/^(?i:continuous.*)$/"
+  only:
+    - master
+    - development
+
+deploy:
+  - provider: script
+    script: wget -qO - https://raw.githubusercontent.com/Nitrux/nitrux-repository-util/master/upload-pkgs | sh -s *.deb
+    skip_cleanup: true
+    on:
+      branch: master
 
 notifications:
   email: false
