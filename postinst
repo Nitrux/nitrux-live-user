@@ -3,5 +3,5 @@
 
 echo "==> Adding user 'nitrux'."
 
-adduser -G user,adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare -m nitrux
+adduser -G nitrux,adm,cdrom,sudo,dip,plugdev,bluetooth,lpadmin,sambashare -m nitrux
 printf "%s\n" nitrux nitrux | passwd nitrux
