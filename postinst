@@ -4,5 +4,5 @@ set -x
 
 echo "==> Adding user 'nitrux'."
 
-adduser -G nitrux,adm,cdrom,sudo,dip,plugdev,bluetooth,lpadmin,sambashare -m nitrux
+useradd -G nitrux,adm,cdrom,sudo,dip,plugdev,bluetooth,lpadmin,sambashare -m nitrux
 printf "%s\n" nitrux nitrux | passwd nitrux
