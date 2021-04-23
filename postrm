@@ -4,9 +4,8 @@ set -x
 
 echo "==> Removing user 'nitrux'."
 
-if id -i "nitrux" >/dev/null 2>&1; then
+if [[ $(getent passwd nitrux) = "" ]]; then
     deluser --remove-home nitrux
 else
     echo 'user doesn't exist'
 fi
-
