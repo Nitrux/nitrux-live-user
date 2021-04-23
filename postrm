@@ -7,5 +7,5 @@ echo "==> Removing user 'nitrux'."
 if [[ $(getent passwd nitrux) = "" ]]; then
     deluser --remove-home nitrux
 else
-    echo 'user doesn't exist'
+    echo "user doesn't exist"
 fi
