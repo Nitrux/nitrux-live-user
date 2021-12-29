@@ -6,5 +6,6 @@ echo "==> Adding user 'nitrux'."
 
 groupadd sambashare
 
-useradd -G adm,cdrom,sudo,dip,plugdev,bluetooth,lpadmin,sambashare,input -m nitrux || true
+useradd -G adm,cdrom,sudo,dip,plugdev,bluetooth,lpadmin,sambashare,input -m nitrux
+
 printf "%s\n" nitrux nitrux | passwd nitrux
