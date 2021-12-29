@@ -9,10 +9,11 @@ git_version=$(git rev-parse --short HEAD)
 	"Section: misc" \
 	"Priority: optional" \
 	"Homepage: https://nxos.org" \
-	"Package: nitrux-live-user" \
-	"Version: 0.1.9-$git_version" \
+	"Package: nitrux-live-user-minimal" \
+	"Version: 0.0.1-$git_version" \
 	"Maintainer: Luis Lavaire <llavaire01@gmail.com>" \
 	"Depends: adduser" \
+	"Conflicts: nitrux-live-user" \
 	"Architecture: all" \
 	"Postinst: postinst" \
 	"Postrm: postrm" \
