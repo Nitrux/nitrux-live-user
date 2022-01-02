@@ -4,6 +4,6 @@ set -x
 
 echo "==> Adding user 'nitrux'."
 
-useradd -G adm,cdrom,sudo,dip,plugdev,input -m nitrux
+useradd -G adm,cdrom,dip,plugdev,input,wheel -m nitrux
 
 printf "%s\n" nitrux nitrux | passwd nitrux
