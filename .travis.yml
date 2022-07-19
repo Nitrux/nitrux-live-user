@@ -4,7 +4,7 @@ before_install:
   - gem install package_cloud
 
 script:
-  - sudo ./travis-build.sh
+  - sudo ./gh-build.sh
   - package_cloud push nitrux/repo/debian/trixie *.deb
 
 branches:
