@@ -6,6 +6,7 @@ echo "==> Adding user 'nitrux'."
 
 groupadd sambashare
 groupadd wheel
+groupadd fuse
 
 useradd -G adm,cdrom,dip,plugdev,bluetooth,lpadmin,sambashare,input,wheel,fuse,docker,pipewire -m nitrux
 
