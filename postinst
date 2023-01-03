@@ -8,6 +8,6 @@ groupadd sambashare
 groupadd wheel
 groupadd fuse
 
-useradd -G adm,cdrom,dip,plugdev,bluetooth,lpadmin,sambashare,input,wheel,fuse,docker,pipewire -m nitrux
+useradd -G adm,cdrom,dip,plugdev,bluetooth,lpadmin,sambashare,input,wheel,fuse,pipewire -m nitrux
 
 printf "%s\n" nitrux nitrux | passwd nitrux
