@@ -9,6 +9,6 @@ groupadd wheel
 groupadd fuse
 groupadd gamemode
 
-useradd -G adm,cdrom,dip,plugdev,bluetooth,lpadmin,sambashare,input,wheel,fuse,pipewire,sudo,gamemode -m nitrux
+useradd -G adm,cdrom,dip,plugdev,bluetooth,lpadmin,sambashare,input,wheel,fuse,pipewire,sudo,gamemode,video -m nitrux
 
 printf "%s\n" nitrux nitrux | passwd nitrux
