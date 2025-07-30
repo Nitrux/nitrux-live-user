@@ -50,6 +50,8 @@ for group in "${LIVE_USER_GROUPS[@]}"; do
     fi
 done
 
-useradd -G "${LIVE_USER_GROUPS[@]}" -m nitrux
+IFS=',' joined_groups="${LIVE_USER_GROUPS[*]}"
+
+useradd -G "${joined_groups}" -m nitrux
 
 printf "%s\n" nitrux nitrux | passwd nitrux
