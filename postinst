@@ -55,6 +55,6 @@ IFS=',' joined_groups="${LIVE_USER_GROUPS[*]}"
 
 useradd -G "${joined_groups}" -m "$LIVE_USER"
 
-LIVE_PASSWORD='NxLive!2025#'
+LIVE_PASSWORD='nitrux'
 
 printf '%s\n' "$LIVE_PASSWORD" "$LIVE_PASSWORD" | passwd "$LIVE_USER"
