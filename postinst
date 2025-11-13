@@ -26,6 +26,7 @@ set -eu
 
 echo "==> Adding user 'nitrux'."
 
+LIVE_USER="nitrux"
 LIVE_USER_GROUPS=(
     adm
     bluetooth
@@ -52,6 +53,8 @@ done
 
 IFS=',' joined_groups="${LIVE_USER_GROUPS[*]}"
 
-useradd -G "${joined_groups}" -m nitrux
+useradd -G "${joined_groups}" -m "$LIVE_USER"
 
-printf "%s\n" nitrux nitrux | passwd nitrux
+LIVE_PASSWORD='NxLive!2025#'
+
+printf '%s\n' "$LIVE_PASSWORD" "$LIVE_PASSWORD" | passwd "$LIVE_USER"
